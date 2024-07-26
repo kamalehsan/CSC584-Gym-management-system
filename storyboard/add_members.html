@@ -1,0 +1,320 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Add Member</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<div class="wrapper">
+    <!-- Navbar -->
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    
+  </nav>
+  <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="" class="brand-link">
+        <img src="dist/img/2382414.png" class="brand-image img-circle elevation-3" alt="User Image">
+        <span class="brand-text font-weight-light">Membership System</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-th-list"></i>
+                        <p>
+                            Membership Types
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="add_type.html" class="nav-link">
+                                <i class="fas fa-circle-notch nav-icon"></i>
+                                <p>Add New</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="view_type.html" class="nav-link">
+                                <i class="fas fa-circle-notch nav-icon"></i>
+                                <p>View and Manage</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="add_members.html" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Add Members</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="manage_members.html" class="nav-link">
+                        <i class="nav-icon fas fa-users-cog"></i>
+                        <p>Manage Members</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="list_renewal.html" class="nav-link">
+                        <i class="nav-icon fas fa-undo"></i>
+                        <p>Renewal</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="report.html" class="nav-link">
+                        <i class="nav-icon fas fa-file-invoice"></i>
+                        <p>Membership Report</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="revenue_report.html" class="nav-link">
+                        <i class="nav-icon fas fa-money-check"></i>
+                        <p>Revenue Report</p>
+                    </a>
+                </li>
+
+                
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Add Members</h1>
+                
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    
+                    <li class="breadcrumb-item active"></li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- Info boxes -->
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-12">
+
+                        
+                            <div class="alert alert-success alert-dismissible">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <h5><i class="icon fas fa-check"></i> Success</h5>
+                                <?php echo $response['message']; ?>
+                            </div>
+                        
+                            <div class="alert alert-danger alert-dismissible">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <h5><i class="icon fas fa-ban"></i> Error</h5>
+                                
+                            </div>
+                        
+                        <!-- Visit codeastro.com for more projects -->
+                        <!-- general form elements -->
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title"><i class="fas fa-keyboard"></i> Add Members Form</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <!-- form start -->
+                            <form method="post" action="" enctype="multipart/form-data">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="fullname">Full Name</label>
+                                            <input type="text" class="form-control" id="fullname" name="fullname"
+                                                   placeholder="Enter full name" required>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="dob">Date of Birth</label>
+                                            <input type="date" class="form-control" id="dob" name="dob" required>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="gender">Gender</label>
+                                            <select class="form-control" id="gender" name="gender" required>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row mt-3">
+                                        <div class="col-sm-6">
+                                            <label for="contactNumber">Contact Number</label>
+                                            <input type="tel" class="form-control" id="contactNumber"
+                                                   name="contactNumber" placeholder="Enter contact number" required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                   placeholder="Enter email" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="col-sm-6">
+                                            <label for="address">Address</label>
+                                            <input type="text" class="form-control" id="address" name="address"
+                                                   placeholder="Enter address" required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="country">Country</label>
+                                            <input type="text" class="form-control" id="country" name="country"
+                                                   placeholder="Enter country" required>
+                                        </div>
+                                    </div>
+                                    <!-- Visit codeastro.com for more projects -->
+
+                                    <div class="row mt-3">
+                                        <div class="col-sm-6">
+                                            <label for="postcode">Postcode</label>
+                                            <input type="text" class="form-control" id="postcode" name="postcode"
+                                                   placeholder="Enter postcode" required>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="occupation">Occupation</label>
+                                            <input type="text" class="form-control" id="occupation" name="occupation"
+                                                   placeholder="Enter occupation" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                    <div class="col-sm-6">
+                                        <label for="membershipType">Membership Type</label>
+                                        <!-- Replace with a dynamic select box populated from the database -->
+                                        <select class="form-control" id="membershipType" name="membershipType" required>
+                                            
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <label for="photo">Member Photo</label>
+                                        <input type="file" class="form-control-file" id="photo" name="photo">
+                                    </div>
+                                </div>
+
+                                </div>
+                                <!-- /.card-body -->
+
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.card -->
+
+                    </div>
+                    <!--/.col (left) -->
+
+                </div>
+                <!-- /.row -->
+                <!-- Visit codeastro.com for more projects -->
+
+            </div><!--/. container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+    <!-- Visit codeastro.com for more projects -->
+    <!-- Main Footer -->
+    <footer class="main-footer">
+
+    </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+
+<!-- PAGE PLUGINS -->
+
+<!-- PAGE SCRIPTS -->
+<script src="dist/js/pages/dashboard2.js"></script>
+</body>
+</html>
